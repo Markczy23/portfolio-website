@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function StarBackground() {
+export const StarBackground = () => {
   const [stars, setStars] = useState([]);
   const [meteors, setMeteors] = useState([]);
 
@@ -86,6 +86,4 @@ function StarBackground() {
       ))}
     </div>
   );
-}
-
-export default StarBackground;
+};

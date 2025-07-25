@@ -1,7 +1,7 @@
 import { Moon, Sun } from "lucide-react";
 import { useEffect, useState } from "react";
 
-function ThemeToggle() {
+export const ThemeToggle = () => {
   //TODO set dark mode as initial
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -40,6 +40,4 @@ function ThemeToggle() {
       )}
     </button>
   );
-}
-
-export default ThemeToggle;
+};
