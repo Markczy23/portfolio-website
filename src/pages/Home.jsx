@@ -1,7 +1,15 @@
+import NavBar from "../components/Navbar";
+import StarBackground from "../components/StarBackground";
+import ThemeToggle from "../components/ThemeToggle";
+
 function Home() {
-    return (
-        <div>Home</div>
-    )
+  return (
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
+      <ThemeToggle />
+      <StarBackground />
+      <NavBar />
+    </div>
+  );
 }
 
-export default Home
+export default Home;
