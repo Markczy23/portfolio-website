@@ -10,23 +10,27 @@ export const AboutSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
             <h3 className="text-2xl font-semibold">Passion for Tech</h3>
-            <p className="text-muted-foreground">
+            <p>
               Through my many projects, I've developed a good knowledge of
               various frameworks and technologies.
             </p>
-            <p className="text-muted-foreground">
+            <p>
               I'm passionate about creating new software applications for
               real-world problems and am constantly learning new areas to always
               improve.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pt-4 justify-center">
-              <a href="#contact" className="cosmic-button">
+              {/* <a href="#contact" className="cosmic-button">
                 Get in Touch
               </a>
               <a
                 href=""
                 className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/10 transition-colors duration-300"
               >
+                Download My Resume
+              </a> */}
+
+              <a href="" className="cosmic-button">
                 Download My Resume
               </a>
             </div>
@@ -40,7 +44,7 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Web Development</h4>
-                  <p className="text-muted-foreground">
+                  <p>
                     I create responsive web applications using modern
                     frameworks.
                   </p>
@@ -55,7 +59,7 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Design</h4>
-                  <p className="text-muted-foreground">
+                  <p>
                     I create responsive web applications using modern
                     frameworks.
                   </p>
@@ -70,7 +74,7 @@ export const AboutSection = () => {
                 </div>
                 <div className="text-left">
                   <h4 className="font-semibold text-lg">Experience</h4>
-                  <p className="text-muted-foreground">
+                  <p>
                     I create responsive web applications using modern
                     frameworks.
                   </p>

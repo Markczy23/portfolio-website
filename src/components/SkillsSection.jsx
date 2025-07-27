@@ -5,9 +5,7 @@ const skills = [
   { name: "HTML/CSS", level: 90, category: "frontend" },
   { name: "JavaScript", level: 90, category: "frontend" },
   { name: "React", level: 85, category: "frontend" },
-  //   { name: "TypeScript", level: 60, category: "frontend" },
   { name: "Tailwind CSS", level: 85, category: "frontend" },
-  { name: "Next.js", level: 85, category: "frontend" },
 
   // Backend
   { name: "Node.js", level: 85, category: "backend" },
@@ -70,9 +68,7 @@ export const SkillsSection = () => {
               </div>
 
               <div className="text-right mt-1">
-                <span className="text-sm text-muted-foreground">
-                  {skill.level}%
-                </span>
+                <span className="text-sm">{skill.level}%</span>
               </div>
             </div>
           ))}

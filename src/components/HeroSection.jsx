@@ -19,7 +19,7 @@ export const HeroSection = () => {
               Chew
             </span>
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
+          <p className="text-lg md:text-xl max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
             I am a NTU computer science graduate with a passion for full-stack
             web development and artificial intelligence. I love learning new
             technologies and using them to build functional applications.
@@ -34,8 +34,8 @@ export const HeroSection = () => {
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce">
-        <span className="text-sm text-muted-foreground mb-2"> Scroll </span>
-        <ArrowDown className="h-5 w-5 text-primary" />
+        <span className="text-sm mb-2"> Scroll </span>
+        <ArrowDown className="h-10 w-10 text-primary" />
       </div>
     </section>
   );
