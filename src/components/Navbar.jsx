@@ -1,10 +1,12 @@
 import { Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navItems = [
   { name: "Home", href: "#hero" },
   { name: "About", href: "#about" },
-  { name: "Skills", href: "#skills" },
+  { name: "Experience", href: "#experience" },
+  //{ name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   // { name: "Contact", href: "#contact" },
 ];
@@ -14,7 +16,7 @@ export const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.screenY > 10);
+      setIsScrolled(window.scrollY > 10);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -22,7 +24,7 @@ export const NavBar = () => {
 
   return (
     <nav
-      className={`fixed w-full z-40 transition-all duration-300 ${
+      className={`fixed w-full z-40 transition-all duration-300 justify-between ${
         isScrolled ? "py-3 bg-background/80 backdrop-blur-md shadow-xs" : "py-5"
       }`}
     >
@@ -37,7 +39,7 @@ export const NavBar = () => {
         </a>
 
         {/* for desktop */}
-        <div className="hidden md:flex space-x-8">
+        <div className="hidden md:flex items-center space-x-8">
           {navItems.map((item, key) => (
             <a
               key={key}
@@ -47,19 +49,23 @@ export const NavBar = () => {
               {item.name}
             </a>
           ))}
+          <ThemeToggle />
         </div>
 
-        {/* for mobile */}
-        <button
-          onClick={() => setIsMenuOpen((prev) => !prev)}
-          className="md:hidden p-2 text-foreground z-50"
-          aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
-        </button>
+        {/* for mobile - theme toggle and menu button */}
+        <div className="md:hidden flex items-center space-x-2">
+          <ThemeToggle />
+          <button
+            onClick={() => setIsMenuOpen((prev) => !prev)}
+            className="p-2 text-foreground z-50"
+            aria-label={isMenuOpen ? "Close Menu" : "Open Menu"}
+          >
+            {isMenuOpen ? <X size={24} /> : <Menu size={24} />}{" "}
+          </button>
+        </div>
 
         <div
-          className={`fixed inset-0 bg-background/95 backdroup-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden
+          className={`fixed top-0 left-0 w-screen h-screen bg-background/95 backdrop-blur-md z-40 flex flex-col items-center justify-center transition-all duration-300 md:hidden
             ${
               isMenuOpen
                 ? "opacity-100 pointer-events-auto"

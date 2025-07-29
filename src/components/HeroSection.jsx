@@ -14,20 +14,20 @@ export const HeroSection = () => {
               {" "}
               Mark
             </span>
-            <span className="text-gradient opacity-0 ml-2 animate-fade-in-delay-2">
+            <span className="text-gradient opacity-0 animate-fade-in-delay-2">
               {" "}
-              Chew
+              Chew!
             </span>
           </h1>
           <p className="text-lg md:text-xl max-2-2xl mx-auto opacity-0 animate-fade-in-delay-3">
-            I am a NTU computer science graduate with a passion for full-stack
-            web development and artificial intelligence. I love learning new
-            technologies and using them to build functional applications.
+            I enjoy building full-stack applications, experimenting with AI
+            models, and turning ideas into elegant, functional digital
+            solutions.
           </p>
 
           <div className="pt-4 opacity-0 animate-fade-in-delay-4">
             <a href="#projects" className="cosmic-button">
-              View My Work
+              View My Projects
             </a>
           </div>
         </div>

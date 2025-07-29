@@ -29,13 +29,12 @@ export const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="fixed max-sm:hidden top-5 right-5 z-50 p-2 
-      rounded-xl bg-slate-100 transition-colors duration-300 cursor-pointer"
+      className="p-2 rounded-xl border-2 border-border transition-colors duration-300 hover:bg-card"
     >
       {isLightMode ? (
-        <Moon className="h-6 w-6 text-blue-900" />
+        <Moon className="h-5 w-5 text-blue-900" />
       ) : (
-        <Sun className="h-6 w-6 text-orange-400" />
+        <Sun className="h-5 w-5 text-orange-400" />
       )}
     </button>
   );
